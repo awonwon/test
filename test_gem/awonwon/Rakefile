@@ -1,0 +1,17 @@
+require "bundler/gem_tasks"
+
+namespace :say do #代表前面加上namespace，類似db:migrate的db
+
+  desc "5xRuby Demo" # description on "rake -T"
+  task :aww_task => :base do
+  # :aww_task是task名稱，可以使用rake aww_task
+  # "=>" 代表:aww_task做完會去做:base
+    puts "I'm awonwon"
+  end
+
+  task :base do #task沒加上desc就不會出現在"rake -T"中出現
+    puts "how are you?"
+  end
+
+end
+
